@@ -8,399 +8,431 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Dovile</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="#" class="logo">Dovile</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Dovile</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <p>Hello, I'm</p>
+            <h1 class="hero-heading">
+                <span>Dovile</span>
+            </h1>
+            <p>Front-End Developer | UX/UI Designer</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">See My Work</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
             </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section_pic-container"><img src="./assets/profile-pic.gif" alt="Dovile's profile picture">
-        </div>
-        <div class="section_text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Dovile</h1>
-            <p class="section_text_p2">Front-End Developer | UX/UI Designer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="location.href='./#projects'">See My Work</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact</button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/dovilekulikauskiene/'">
-                <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/DovileKul'">
-            </div>
-        </div>
-    </section>
-    <section id="about">
-<p class="section__text__p1 ">Get to know more</p>
-<h1 class="title">About Me</h1>
-<div class="about-section-container">
-    <div class="about-details-container">
-        <div class="about-containers">
-            <div class="details-container">
-                <img src="./assets/experience.png" alt="Experience-icon" class="icon" />
-        <h3>Skills & Learning</h3>
-        <p>Front-End Development 4+ months<br>UX/UI Design 1+ years</p>
-            </div>
-            <div class="details-container">
-                <img src="./assets/education.png" alt="Education-icon" class="icon" />
-           <h3>Education</h3>
-           <p>Meta Front-End Developer Specialization<br>Google UX Design Specialization</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/dovilekulikauskiene/" class="social-icon" target="_blank">
+                    <img src="assets/linkedin.png" alt="Icon"/>
+                </a>
+                <a href="https://github.com/DovileKul" class="social-icon" target="_blank">
+                    <img src="assets/github.png" alt="Icon"/>
+                </a>
+                <a href="https://www.behance.net/dovilkulikau" class="social-icon" target="_blank">
+                    <img src="assets/behance.png" alt="Icon"/>
+                </a>
             </div>
         </div>
-            <div class="text-container">
+        <div class="hero-image">
+            <img src="assets/profile-pic.png" alt="Profile Pic">
+        </div>
+</section>
+
+ <section class="section about" id="about">
+    <div class="container">
+        <p class="section-subtitle">Get to know more</p>
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <div class="about-info">
                 <p><strong>Highly motivated with a foundation in front-end development and UX/UI design, 
-                    having recently completed the Meta Front-End Developer and Google UX Design specializations. </strong>
-                    Skilled in HTML, CSS, visual design and problem-solving.
+                    having recently completed the Meta Front-End Developer and Google UX Design specializations.</strong></p>
+                <p>Skilled in HTML, CSS, visual design and problem-solving.
                     My passion for design and creativity started in childhood when 
                     I attended art classes for about 10 years. Although I took a break from drawing and art, 
-                    I constantly noticed creative ideas and inspirations in everyday life. 
-                    Discovering UX/UI design and coding helped me reconnect with my artistic side, 
-                    allowing me to bring ideas to life in a functional and digital way. <br> <br> <strong>Let’s create something great together!</strong>
-                </p>
-        </div>
-    </div>
-</div>
-<img src="assets/arrow.png" 
-alt="Arrow icon" class="icon arrow" 
-onclick="location.href='./#experience'" />
-</section>
-<section id="experience">
-  <p class="section__text__p1 ">Explore My</p>
-  <h1 class="title">Experience</h1>
-  <div class="experience-details-container">
-    <div class="about-containers">
-      <div class="details-container">
-                    <h2 class="experience-sub-title">Front-End Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>JavaScript</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Manual Testing</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>React.js</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Git</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
+                    I constantly noticed creative ideas and inspirations in everyday life.</p>
+                <p>Discovering UX/UI design and coding helped me reconnect with my artistic side, 
+                    allowing me to bring ideas to life in a functional and digital way.</p>
+                <p><strong>Let's create something great together!</strong></p>
+            </div>
+            <div class="about-cards">
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <img src="assets/education.png" alt="Icon"/>
+                    </div>
+                    <div class="about-card-info">
+                        <h3>Skills & Learning</h3>
+                        <p>Front-End Development 7+ months<br>UX/UI Design 1+ years</p>
                     </div>
                 </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">UX/UI Design</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Wireframing</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Prototyping</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Usability Testing</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Visual Design</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" 
-                            class="icon" />
-                            <div>
-                                <h3>IA</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" 
-                            class="icon" />
-                            <div>
-                                <h3>Figma</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <img src="assets/education.png" alt="Icon"/>
+                    </div>
+                    <div class="about-card-info">
+                        <h3>Education</h3>
+                        <p>Meta Front-End Developer Specialization<br>Google UX Design Specialization</p>
                     </div>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon"
-        class="icon arrow" onclick="location.href='./#projects'" />
-    </section>
-    <section id="projects">
-<p class="section__text__p1 ">Browse My Recent</p>
-<h1 class="title">Projects</h1>
-<div class="experience-details-container">
-    <div class="about-containers">
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-1.png" alt="Project 1"
-            class="project-img"/>
-        </div>
-<h2 class="experience-sub-title project-title">Little Lemon Restaurant</h2>
-<p class="project-description">UX/UI & Development</p>
-<div class="btn-container">
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://github.com/DovileKul/little-lemon-webapp'">Github</button>
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://dovilekul.github.io/little-lemon-webapp/'">Live</button>
-</div>
     </div>
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-2.png" alt="Project 2"
-            class="project-img"/>
-        </div>
-        <h2 class="experience-sub-title project-title">Dentica | Dental Clinic</h2>
-        <p class="project-description">UX/UI & Development</p>
-        <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" 
-            onclick="location.href='https://github.com/DovileKul/dentica-website'">Github</button>
-            <button class="btn btn-color-2 project-btn" 
-            onclick="location.href=`https://dovilekul.github.io/dentica-website/`">Live</button>
-        </div>
-    </div>
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-3.png" alt="Project 3"
-            class="project-img"/>
-        </div>
-        <h2 class="experience-sub-title project-title">Eco-Friendly Living </h2>
-        <p class="project-description">UX/UI Web Design</p>
-        <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" 
-            onclick="location.href='https://www.behance.net/gallery/207929375/Eco-Friendly-Living-UXUI-Web-Design'">Behance</button>
-            <button class="btn btn-color-2 project-btn" 
-            onclick="location.href=`https://www.figma.com/design/5XldjQhlkts7atZAfjDmzC/Embrace-Eco-Friendly-Living-Web?node-id=22-344&t=0x8C9ynR7wFFJ7kb-1`">Live</button>
-        </div>
-    </div>
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-4.png" alt="Project 4"
-            class="project-img"/>
-        </div>
-        <h2 class="experience-sub-title project-title">Sign-Up, Sign-In & Recovery </h2>
-        <p class="project-description">UI Design</p>
-<div class="btn-container">
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://www.behance.net/gallery/208598217/Modern-Sign-Up-Sign-In-and-Password-Recovery-UI-Design'">Behance</button>
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://www.figma.com/design/bRZubp1Sm7xgFjTk0rdH0c/Sign-In-%26-Sign-Up-design?t=Wbb25bfCIB5sN3p3-1'">Live</button>
-</div>
-    </div>
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-5.png" alt="Project 5"
-            class="project-img"/>
-        </div>
-<h2 class="experience-sub-title project-title">EuroTravel | Travel App</h2>
-<p class="project-description">UX/UI Design</p>
-<div class="btn-container">
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://www.behance.net/gallery/206785233/EuroTravel-App-UIUX-Design'">Behance</button>
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href=`https://www.figma.com/design/X96KndE7wow7I23IeccNCp/EuroTravel-App---UI%2FUX-Design?node-id=0-1&t=0x8C9ynR7wFFJ7kb-1`">Live</button>
-</div>
-</div>
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-6.png" alt="Project 6"
-            class="project-img"/>
-        </div>
-<h2 class="experience-sub-title project-title">Card Checkout</h2>
-<p class="project-description">UI Design</p>
-<div class="btn-container">
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://www.behance.net/gallery/209942441/Credit-Card-Checkout-Daily-UI-002'">Behance</button>
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href=`https://www.figma.com/design/95WohSmXNpJTlJy3RPInmP/Credit-Card-Checkout-%7C-DailyUI-002?node-id=0-1&p=f&t=YgiDU8HnuJjHYSaz-0`">Live</button>
-</div>
-</div>
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-7.png" alt="Project 7"
-            class="project-img"/>
-        </div>
-<h2 class="experience-sub-title project-title">Sign Up Form</h2>
-<p class="project-description">UI Design</p>
-<div class="btn-container">
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://www.behance.net/gallery/209781529/Sign-Up-Form-Daily-UI-001'">Behance</button>
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href=`https://www.figma.com/design/XCHqs5CtLYKml3H7pHhVEv/Sign-up-DailyUI-001?node-id=0-1&p=f&t=YgiDU8HnuJjHYSaz-0`">Live</button>
-</div>
-    </div>
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-8.png" alt="Project 8"
-            class="project-img"/>
-        </div>
-<h2 class="experience-sub-title project-title">Calculator</h2>
-<p class="project-description">UI Design</p>
-<div class="btn-container">
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://www.behance.net/gallery/210289977/Calculator-Daily-UI-004?tracking_source=project_owner_other_projects'">Behance</button>
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href=`https://www.figma.com/design/mR6TpHUfk570eLt4E4n3Mg/Calculator-%7C-Daily-UI-%23004?node-id=0-1&p=f&t=YgiDU8HnuJjHYSaz-0`">Live</button>
-</div>
-    </div>
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-9.png" alt="Project 9"
-            class="project-img"/>
-        </div>
-<h2 class="experience-sub-title project-title">NFC DEV | Logo & User Guide</h2>
-<p class="project-description">UX/UI Design</p>
-<div class="btn-container">
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://www.behance.net/gallery/220801687/NFC-DEV-Logo-User-Guide-Design'">Behance</button>
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href=`https://www.figma.com/design/6HOe4evmvSRJZaxf1tq2IY/NFC?node-id=0-1&p=f&t=GVofbxvGw7kfrzRG-0`">Live</button>
-</div>
-    </div>
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-10.png" alt="Project 10"
-            class="project-img"/>
-        </div>
-<h2 class="experience-sub-title project-title">Pizza Carousel Animation</h2>
-<p class="project-description">UI Design</p>
-<div class="btn-container">
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://www.behance.net/gallery/222864757/Pizza-Carousel-Animation-UXUI-Design'">Behance</button>
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href=`https://www.figma.com/design/alqnI0azSFXnasAEoIF3fF/Pizza-Carousel-Animation?node-id=0-1&p=f&t=gUQ7edBtgxAO5u7p-0`">Live</button>
-</div>
-    </div>
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-11.png" alt="Project 11"
-            class="project-img"/>
-        </div>
-<h2 class="experience-sub-title project-title">Skincare Landing Page</h2>
-<p class="project-description">UI Design</p>
-<div class="btn-container">
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://www.behance.net/gallery/223219275/Skincare-Landing-Page-UI-Design'">Behance</button>
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href=`https://www.figma.com/design/3CfyO40zb5zX5cNWNzqmTO/Untitled?node-id=0-1&p=f&t=JAQmXGf8oBHLH7HJ-0`">Live</button>
-</div>
-    </div>
-    <div class="details-container color-container">
-        <div class="article-container">
-            <img src="./assets/project-12.png" alt="Project 12"
-            class="project-img"/>
-        </div>
-<h2 class="experience-sub-title project-title">Furniture E-commerce Website</h2>
-<p class="project-description">UX/UI Design</p>
-<div class="btn-container">
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href='https://www.behance.net/gallery/225334193/Modern-Furniture-E-commerce-Website-UXUI-Design'">Behance</button>
-    <button class="btn btn-color-2 project-btn" 
-    onclick="location.href=`https://www.figma.com/design/GL3CksE14KLVzXkcxSlIdX/MONA-E-Commerce?node-id=0-1&t=bB7lul3aRaP0mfBO-1`">Live</button>
-</div>
-    </div>
-</div>
-</div>
-<img src="./assets/arrow.png" alt="Arrow icon" 
-class="icon arrow" onclick="location.href='./#contact'" />
-    </section>
-    <section id="contact">
-        <p class="section__text__p1 ">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-            <img src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon" />
-            <p><a href="mailto:dokulikauskiene@gmail.com">dokulikauskiene@gmail.com</a></p>
-        </div>
-            <div class="contact-info-container">
-            <img src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon" />
-            <p><a href="https://www.linkedin.com/in/dovilekulikauskiene/">LinkedIn</a></p>
-        </div>
-    </div>
-    </section>
-    <footer>
-    <nav>
-        <div class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <p>Copyright © 2025 Dovile. All rights reserved.</p>
-    </footer>
+</section>
+
+<section class="section experience" id="experience">
+    <div class="container">
+        <p class="section-subtitle">Explore My</p>
+        <h2 class="section-title">Experience</h2>
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="front-end">Front-End Development</button>
+                <button class="tab-button" data-tab="ux-ui">UX/UI Design</button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-panel active" id="front-end">
+                    <div class="skill-row">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>HTML</h3>
+                            <p class="skill-level">Experienced</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>CSS</h3>
+                            <p class="skill-level">Experienced</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>JavaScript</h3>
+                            <p class="skill-level">Basic</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>Manual Testing</h3>
+                            <p class="skill-level">Basic</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>React.js</h3>
+                            <p class="skill-level">Basic</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>Git</h3>
+                            <p class="skill-level">Intermediate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="ux-ui">
+                    <div class="skill-row">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>Wireframing</h3>
+                            <p class="skill-level">Experienced</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>Prototyping</h3>
+                            <p class="skill-level">Experienced</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>Usability Testing</h3>
+                            <p class="skill-level">Basic</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>Visual Design</h3>
+                            <p class="skill-level">Intermediate</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>Information Architecture</h3>
+                            <p class="skill-level">Basic</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="assets/experience.png" alt="Icon"/>
+                            </div>
+                            <h3>Figma</h3>
+                            <p class="skill-level">Experienced</p>
+                        </div>
+                    </div>
+                </div>
+         </section>
+
+         <section class="section projects" id="projects">
+            <div class="container">
+                <p class="section-subtitle">Explore My</p>
+                <h2 class="section-title">Projects</h2>
+                
+                <div class="project-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ui-design">UX/UI Design</button>
+                    <button class="filter-btn" data-filter="development">Development</button>
+                </div>
+        
+                <div class="projects-grid">
+                    <div class="project-card" data-category="development">
+                        <img src="./assets/project-2.png" alt="Dentica | Dental Clinic" class="project-img">
+                        <div class="project-info">
+                            <p class="project-category">UX/UI & Development</p>
+                            <h3 class="project-title">Dentica | Dental Clinic</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/DovileKul/dentica-website" class="project-link" target="_blank">
+                                  GitHub
+                                </a>
+                                <a href="https://dovilekul.github.io/dentica-website/" class="project-link" target="_blank">
+                                  Live
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="development">
+                        <img src="./assets/project-1.png" alt="Little Lemon Restaurant" class="project-img">
+                        <div class="project-info">
+                            <p class="project-category">UX/UI & Development</p>
+                            <h3 class="project-title">Little Lemon Restaurant</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/DovileKul/little-lemon-webapp" class="project-link" target="_blank">
+                                  GitHub
+                                </a>
+                                <a href="https://dovilekul.github.io/little-lemon-webapp/" class="project-link" target="_blank">
+                                  Live
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ui-design">
+                        <img src="./assets/project-3.png" alt="Eco-Friendly Living" class="project-img">
+                        <div class="project-info">
+                            <p class="project-category">UX/UI Web Design</p>
+                            <h3 class="project-title">Eco-Friendly Living</h3>
+                            <div class="project-links">
+                                <a href="https://www.behance.net/gallery/207929375/Eco-Friendly-Living-UXUI-Web-Design" class="project-link" target="_blank">
+                                  Behance
+                                </a>
+                                <a href="https://www.figma.com/design/5XldjQhlkts7atZAfjDmzC/Embrace-Eco-Friendly-Living-Web?node-id=22-344&t=cRb0kNozK5BGZyBn-0" class="project-link" target="_blank">
+                                  Live
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ui-design">
+                        <img src="./assets/project-8.png" alt="Calculator" class="project-img">
+                        <div class="project-info">
+                            <p class="project-category">UI Design</p>
+                            <h3 class="project-title">Calculator</h3>
+                            <div class="project-links">
+                                <a href="https://www.behance.net/gallery/210289977/Calculator-Daily-UI-004?tracking_source=project_owner_other_projects" class="project-link" target="_blank">
+                                  Behance
+                                </a>
+                                <a href="https://www.figma.com/design/mR6TpHUfk570eLt4E4n3Mg/Calculator-%7C-Daily-UI--004?node-id=0-1" class="project-link" target="_blank">
+                                  Live
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="ui-design">
+                        <img src="./assets/project-5.png" alt="EuroTravel | Travel App" class="project-img">
+                        <div class="project-info">
+                            <p class="project-category">UX/UI Design</p>
+                            <h3 class="project-title">EuroTravel | Travel App</h3>
+                            <div class="project-links">
+                                <a href="https://www.behance.net/gallery/206785233/EuroTravel-App-UIUX-Design" class="project-link" target="_blank">
+                                  Behance
+                                </a>
+                                <a href="https://www.figma.com/design/X96KndE7wow7I23IeccNCp/EuroTravel-%7C-Travel-App?node-id=0-1&t=cOfgSYWK7hGqVLuj-0" class="project-link" target="_blank">
+                                  Live
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ui-design">
+                        <img src="./assets/project-6.png" alt="Card Checkout" class="project-img">
+                        <div class="project-info">
+                            <p class="project-category">UI Design</p>
+                            <h3 class="project-title">Card Checkout</h3>
+                            <div class="project-links">
+                                <a href="https://www.behance.net/gallery/209942441/Credit-Card-Checkout-Daily-UI-002" class="project-link" target="_blank">
+                                  Behance
+                                </a>
+                                <a href="https://www.figma.com/design/95WohSmXNpJTlJy3RPInmP/Credit-Card-Checkout-%7C-DailyUI--002?t=O1Z9OVpgGxxZW3nv-0" class="project-link" target="_blank">
+                                  Live
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ui-design">
+                        <img src="./assets/project-7.png" alt="Sign Up Form" class="project-img">
+                        <div class="project-info">
+                            <p class="project-category">UI Design</p>
+                            <h3 class="project-title">Sign Up Form</h3>
+                            <div class="project-links">
+                                <a href="https://www.behance.net/gallery/209781529/Sign-Up-Form-Daily-UI-001" class="project-link" target="_blank">
+                                  Behance
+                                </a>
+                                <a href="https://www.figma.com/design/XCHqs5CtLYKml3H7pHhVEv/Sign-up-DailyUI-001?node-id=0-1&p=f&t=YgiDU8HnuJjHYSaz-0" class="project-link" target="_blank">
+                                  Live
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ui-design">
+                        <img src="./assets/project-9.png" alt="NFC DEV | Logo & User Guide" class="project-img">
+                        <div class="project-info">
+                            <p class="project-category">UX/UI Design</p>
+                            <h3 class="project-title">NFC DEV | Logo & User Guide</h3>
+                            <div class="project-links">
+                                <a href="https://www.behance.net/gallery/220801687/NFC-DEV-Logo-User-Guide-Design" class="project-link" target="_blank">
+                                  Behance
+                                </a>
+                                <a href="https://www.figma.com/design/6HOe4evmvSRJZaxf1tq2IY/NFC?node-id=0-1&p=f&t=GVofbxvGw7kfrzRG-0" class="project-link" target="_blank">
+                                  Live
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ui-design">
+                        <img src="./assets/project-10.png" alt="Pizza Carousel Animation" class="project-img">
+                        <div class="project-info">
+                            <p class="project-category">UI Design</p>
+                            <h3 class="project-title">Pizza Carousel Animation</h3>
+                            <div class="project-links">
+                                <a href="https://www.behance.net/gallery/222864757/Pizza-Carousel-Animation-UXUI-Design" class="project-link" target="_blank">
+                                  Behance
+                                </a>
+                                <a href="https://www.figma.com/design/alqnI0azSFXnasAEoIF3fF/Pizza-Carousel-Animation?node-id=0-1&t=PNTuTQ4L51471c7k-0" class="project-link" target="_blank">
+                                  Live
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ui-design">
+                        <img src="./assets/project-11.png" alt="Skincare Landing Page" class="project-img">
+                        <div class="project-info">
+                            <p class="project-category">UI Design</p>
+                            <h3 class="project-title">Skincare Landing Page</h3>
+                            <div class="project-links">
+                                <a href="https://www.behance.net/gallery/223219275/Skincare-Landing-Page-UI-Design" class="project-link" target="_blank">
+                                  Behance
+                                </a>
+                                <a href="https://www.figma.com/design/3CfyO40zb5zX5cNWNzqmTO/Derma-Skincare-Landing-Page?node-id=0-1" class="project-link" target="_blank">
+                                  Live
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ui-design">
+                        <img src="./assets/project-12.png" alt="Skincare Landing Page" class="project-img">
+                        <div class="project-info">
+                            <p class="project-category">UX/UI Design</p>
+                            <h3 class="project-title">Furniture E-commerce Website</h3>
+                            <div class="project-links">
+                                <a href="https://www.behance.net/gallery/225334193/Modern-Furniture-E-commerce-Website-UXUI-Design" class="project-link" target="_blank">
+                                  Behance
+                                </a>
+                                <a href="https://www.figma.com/design/GL3CksE14KLVzXkcxSlIdX/MONA-E-Commerce?node-id=0-1&t=fY3ZlQnkdgwLooxq-1" class="project-link" target="_blank">
+                                  Live
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="container">
+                <p class="section-subtitle">Let's Connect</p>
+                <h2 class="section-title">Contact</h2>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <img src="./assets/email.png" alt="Email icon" />
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p><a href="mailto:dokulikauskiene@gmail.com">dokulikauskiene@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <img src="./assets/linkedin.png" alt="LinkedIn icon" />
+                            </div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <p><a href="https://www.linkedin.com/in/dovilekulikauskiene/" target="_blank">dovilekulikauskiene</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <img src="./assets/github.png" alt="GitHub icon" />
+                            </div>
+                            <div class="contact-details">
+                                <h3>GitHub</h3>
+                                <p><a href="https://github.com/DovileKul" target="_blank">DovileKul</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <script src="script.js"></script>
+    
 </body>
 </html>
