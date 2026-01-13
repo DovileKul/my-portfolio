@@ -66,3 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+const projectsGrid = document.querySelector('.projects-grid');
+const projectsArray = Array.from(projectsGrid.children);
+
+projectsArray.reverse().forEach(card => projectsGrid.appendChild(card));
+
