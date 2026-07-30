@@ -42,34 +42,57 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Projects
+    const grid = document.querySelector('.projects-grid');
     const filters = document.querySelectorAll('.filter-btn');
-    const projects = document.querySelectorAll('.project-card');
+    const showMoreBtn = document.getElementById('showMore');
 
-    if (filters.length && projects.length) {
-        filters[0].classList.add('active');
+    if (grid && filters.length) {
+        Array.from(grid.children).reverse().forEach(card => grid.appendChild(card));
+
+        const cards = grid.querySelectorAll('.project-card');
+        const VISIBLE = 6;
+        let activeFilter = 'all';
+        let expanded = false;
+
+        const render = () => {
+            let shown = 0;
+
+            cards.forEach(card => {
+                const matches = activeFilter === 'all'
+                    || card.dataset.category.includes(activeFilter);
+
+                if (!matches) {
+                    card.classList.add('is-hidden');
+                    return;
+                }
+
+                shown++;
+                card.classList.toggle('is-hidden', !expanded && shown > VISIBLE);
+            });
+
+            if (showMoreBtn) {
+                showMoreBtn.parentElement.style.display =
+                    shown > VISIBLE ? 'flex' : 'none';
+                showMoreBtn.textContent = expanded ? 'Show less' : 'Show more projects';
+            }
+        };
 
         filters.forEach(btn => {
             btn.addEventListener('click', () => {
                 filters.forEach(f => f.classList.remove('active'));
                 btn.classList.add('active');
-                const filter = btn.dataset.filter;
-
-                projects.forEach(card => {
-                    const show = filter === 'all' || card.dataset.category.includes(filter);
-                    card.style.display = show ? 'block' : 'none';
-                    setTimeout(() => {
-                        card.style.opacity = show ? '1' : '0';
-                        card.style.transform = show ? 'scale(1)' : 'scale(0.8)';
-                    }, 10);
-                });
+                activeFilter = btn.dataset.filter;
+                expanded = false;
+                render();
             });
         });
+
+        showMoreBtn?.addEventListener('click', () => {
+            expanded = !expanded;
+            render();
+        });
+
+        filters[0].classList.add('active');
+        render();
     }
 });
-
-
-const projectsGrid = document.querySelector('.projects-grid');
-const projectsArray = Array.from(projectsGrid.children);
-
-projectsArray.reverse().forEach(card => projectsGrid.appendChild(card));
-
