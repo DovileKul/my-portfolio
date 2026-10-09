@@ -24,20 +24,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Experience 
+       // Experience
     const tabs = document.querySelectorAll('.tab-button');
     const panels = document.querySelectorAll('.tab-panel');
 
-    if (tabs.length && panels.length) {
-        tabs[0].classList.add('active');
-        panels[0].classList.add('active');
+    const activateTab = (tab) => {
+        tabs.forEach(t => {
+            const isActive = t === tab;
+            t.classList.toggle('active', isActive);
+            t.setAttribute('aria-selected', isActive);
+            t.tabIndex = isActive ? 0 : -1;
+        });
 
+        panels.forEach(p => {
+            const isActive = p.id === tab.dataset.tab;
+            p.classList.toggle('active', isActive);
+            p.hidden = !isActive;
+        });
+    };
+
+    if (tabs.length && panels.length) {
+        activateTab(tabs[0]);
         tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                panels.forEach(p => p.classList.remove('active'));
-                tab.classList.add('active');
-                document.getElementById(tab.dataset.tab)?.classList.add('active');
-            });
+            tab.addEventListener('click', () => activateTab(tab));
         });
     }
 
